@@ -1,0 +1,14 @@
+{% extends 'result.html' %}
+
+{% block content %}
+    {% for card in products %}
+    <div class="car-item">
+        <img src="{{ url_for('static', filename='img/turismo.jpg') }}" alt={{card[1]}} class="card-img-top">
+        <div class="card-body">
+            <div class="card-title">{{ card[1]}}</div>
+            <div class="card-price">{{ card[3]}} </div>
+            <button>add to</button>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

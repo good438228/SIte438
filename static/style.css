@@ -1,0 +1,86 @@
+body {
+    background-color: #808080;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0; /* Убираем лишние отступы */
+}
+
+.header {
+    background-color: #ffcc00;
+    color: #333;
+    top: 100px;
+    padding: 2px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar {
+
+    top: 130px; /* Панель будет расположена немного ниже (отступ от верхнего края) */
+    left: 0; /* Начинается с левого края */
+    width: 100%; /* Панель растягивается на всю ширину */
+    height: 80px; /* Устанавливаем высоту панели */
+    background-color: #333;
+    display: flex;
+    justify-content: space-around; /* Располагаем кнопки равномерно */
+    align-items: center; /* Центрируем элементы по вертикали */
+    z-index: 1000; /* Задаем панель на передний план */
+}
+
+.sidebar button {
+    padding: 10px 20px; /* Исправил ошибку с 'px 20px' */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background-color: #45a049;
+}
+
+.image-container {
+    margin-top: 120px; /* Добавляем отступ сверху, чтобы контент не перекрывал панель */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.car-item {
+    text-align: center;
+    margin: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    color: black;
+}
+
+.car-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.car-item button {
+    margin-top: 10px;
+    padding: 10px 80px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.car-item button:hover {
+    background-color: #45a049;
+}
+
+h1, h2 {
+    text-align: center;
+}

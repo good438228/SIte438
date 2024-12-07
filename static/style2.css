@@ -1,0 +1,63 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .price {
+            color: black;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .car-image img {
+            width: 100%;
+            max-width: 500px;
+        }
+        .color-options {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .color-options div {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .color-red { background-color: red; }
+        .color-pink { background-color: hotpink; }
+        .color-yellow { background-color: yellow; }
+        .color-blue { background-color: blue; }
+        .color-black { background-color: black; }
+        .color-white { background-color: white; }
+        .buy-button {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .description {
+            font-size: 16px;
+            margin-top: 20px;
+            color: #555;
+        }
