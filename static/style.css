@@ -10,10 +10,11 @@ body {
     background-color: #ffcc00;
     color: #333;
     top: 100px;
-    padding: 2px;
+    padding: 1px;
     text-align: center;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
+
 }
 
 .sidebar {
