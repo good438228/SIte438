@@ -36,6 +36,10 @@ def result():
 def page1():
     return render_template('page1.html')
 
+@app.route("/index2")
+def index2():
+    return render_template('index2.html')
+
 
 @app.route("/page2")
 def page2():
@@ -78,6 +82,8 @@ def page9():
 @app.route("/products")
 def products():
     return render_template('products.html')
+
+
 
 
     return render_template('products.html', products=cards)

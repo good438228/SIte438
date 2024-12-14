@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Purchase Confirmation</title>
+
+
 
 </head>
 <body>
-    <div class="header">
-        Longin Store
+
+
+        <div class="sidebar">
+        <button onclick="window.location.href='';">Test button</button>
+        <button onclick="window.location.href='/index2';">Store</button>
+        <button onclick="window.location.href='/products';">Updates</button>
+        <button onclick="window.location.href='/page3';">Information</button>
+    </div>
+
+
+        <div class="header">
+    <h1>Longin store</h1>
+    <h2>Онлайн магазин машин</h2>
     </div>
 
     <div class="container">
