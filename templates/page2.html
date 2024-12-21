@@ -21,19 +21,32 @@
     </div>
 
 
-        <div class="header">
-    <h1>Longin store</h1>
-    <h2>Онлайн магазин машин</h2>
+    <div class="header">
+        <h1>Longin Store</h1>
     </div>
 
     <div class="container">
         <h2>Turismo R</h2>
 
-        <div class="price">$2,525,000</div>
-
-        <div class="car-image">
-            <img src="https://cq.ru/img/f/e/2024/5/09/253505.jpg" alt="Turismo R">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://cq.ru/img/f/e/2024/5/09/253505.jpg" alt="Turismo R">
+                </div>
+                <div class="slide">
+                    <img src="https://i.redd.it/5owvar0qwwd91.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://external-preview.redd.it/C6_Wd7TcCrvqsR5Cnf6fsqYADYzErlE82QBjLIgE-xU.jpg?auto=webp&s=b11d9f6b827c5fc363fd415363dbdad2d8fe5073" alt="">
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+            </div>
         </div>
+
+        <div class="price">$2,525,000</div>
 
         <h3>Select from available colors to order:</h3>
         <div class="color-options">
@@ -47,10 +60,34 @@
 
         <button class="buy-button" onclick="window.location.href='page9';">Confirm</button>
 
-
         <div class="description">
             The perfect car to go with your flesh tunnel earrings, frosted spikes, and oversize jeans. Buy this and you'll never be judged again.
         </div>
     </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const slideElements = document.querySelectorAll('.slide');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentSlide = 0;
+
+        function updateSlide() {
+            const slideWidth = slideElements[0].clientWidth;
+            slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slideElements.length;
+            updateSlide();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slideElements.length) % slideElements.length;
+            updateSlide();
+        });
+
+        window.addEventListener('resize', updateSlide);
+    </script>
 </body>
 </html>

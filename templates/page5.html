@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Purchase Confirmation</title>
 
+
+
 </head>
 <body>
+
+
         <div class="sidebar">
         <button onclick="window.location.href='';">Test button</button>
         <button onclick="window.location.href='/index2';">Store</button>
@@ -17,19 +21,32 @@
     </div>
 
 
-        <div class="header">
-    <h1>Longin store</h1>
-    <h2>Онлайн магазин машин</h2>
+    <div class="header">
+        <h1>Longin Store</h1>
     </div>
 
     <div class="container">
         <h2>Scramjet</h2>
 
-        <div class="price">$3,600,000</div>
-
-        <div class="car-image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTBc7xCI-OGWCzMmFmVbl24Nv7zIWTuAaweg&s" alt="Scramjet">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTBc7xCI-OGWCzMmFmVbl24Nv7zIWTuAaweg&s" alt="Turismo R">
+                </div>
+                <div class="slide">
+                    <img src="https://www.gta5rides.com/vehicleimages/cropped/Scramjet-GTAO-front.png.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://cs1.gtaall.com/screenshots/4dc09/2020-09/original/3af674bf2afe16fc781d812e46e2b8ff59962ab0/830888-GTAIV-2020-09-11-13-15-24-71.jpg" alt="">
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+            </div>
         </div>
+
+        <div class="price">$3,600,000</div>
 
         <h3>Select from available colors to order:</h3>
         <div class="color-options">
@@ -47,5 +64,30 @@
             The perfect car to go with your flesh tunnel earrings, frosted spikes, and oversize jeans. Buy this and you'll never be judged again.
         </div>
     </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const slideElements = document.querySelectorAll('.slide');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentSlide = 0;
+
+        function updateSlide() {
+            const slideWidth = slideElements[0].clientWidth;
+            slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slideElements.length;
+            updateSlide();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slideElements.length) % slideElements.length;
+            updateSlide();
+        });
+
+        window.addEventListener('resize', updateSlide);
+    </script>
 </body>
 </html>

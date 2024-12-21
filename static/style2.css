@@ -1,9 +1,10 @@
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #e0f7fa;
             margin: 0;
             padding: 0;
         }
+
         .header {
             background-color: #ffcc00;
             color: #333;
@@ -12,52 +13,122 @@
             font-size: 24px;
             font-weight: bold;
         }
+
         .container {
             width: 100%;
             max-width: 800px;
             margin: 20px auto;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #535e70;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 20px;
+            border-radius: 8px;
         }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-controls button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
         .price {
-            color: black;
+            color: #ffffff;
             font-size: 28px;
             font-weight: bold;
             margin-bottom: 15px;
         }
-        .car-image img {
-            width: 100%;
-            max-width: 500px;
-        }
+
         .color-options {
             display: flex;
             justify-content: space-between;
             margin: 10px 0;
         }
+
         .color-options div {
             width: 50px;
             height: 50px;
             border-radius: 50%;
             cursor: pointer;
+            border: 2px solid #cccccc;
         }
-        .color-red { background-color: red; }
-        .color-pink { background-color: hotpink; }
-        .color-yellow { background-color: yellow; }
-        .color-blue { background-color: blue; }
-        .color-black { background-color: black; }
-        .color-white { background-color: white; }
+
+        .color-red { background-color: #e53935; }
+        .color-pink { background-color: #f06292; }
+        .color-yellow { background-color: #ffeb3b; }
+        .color-blue { background-color: #2196f3; }
+        .color-black { background-color: #212121; }
+        .color-white { background-color: #ffffff; border: 2px solid #212121; }
+
         .buy-button {
             width: 100%;
             padding: 10px;
             font-size: 18px;
-            background-color: #333;
+            background-color: #00796b;
             color: white;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
         }
+
+        .buy-button:hover {
+            background-color: #004d40;
+        }
+
         .description {
             font-size: 16px;
             margin-top: 20px;
-            color: #555;
+            color: #00000;
         }
+
+
+
+.sidebar button {
+    padding: 10px 20px; /* Исправление отступов вокруг текста кнопки */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 0 15px; /* Увеличены отступы между кнопками */
+    font-size: 18px; /* Увеличиваем размер шрифта */
+}
+
+.sidebar button:hover {
+    background-color: #45a049;
+}

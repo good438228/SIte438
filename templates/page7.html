@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Purchase Confirmation</title>
 
+
+
 </head>
 <body>
+
+
         <div class="sidebar">
         <button onclick="window.location.href='';">Test button</button>
         <button onclick="window.location.href='/index2';">Store</button>
@@ -17,19 +21,32 @@
     </div>
 
 
-        <div class="header">
-    <h1>Longin store</h1>
-    <h2>Онлайн магазин машин</h2>
+    <div class="header">
+        <h1>Longin Store</h1>
     </div>
 
     <div class="container">
         <h2>Coil Rocket Voil ZX</h2>
 
-        <div class="price">$4,000,000</div>
-
-        <div class="car-image">
-            <img src="https://cs1.gtavicecity.ru/attachments/2017-10/original/2402ae2ea4548f090ce3157043e2cb7460145d51/7981-GTA5-2017-08-07-15-41-49-58.jpg" alt="Coil Rocket Voil ZX">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://cs1.gtavicecity.ru/attachments/2017-10/original/2402ae2ea4548f090ce3157043e2cb7460145d51/7981-GTA5-2017-08-07-15-41-49-58.jpg" alt="Turismo R">
+                </div>
+                <div class="slide">
+                    <img src="https://staticg.sportskeeda.com/editor/2021/02/be2cf-16138580729528-800.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://cs1.gtavicecity.ru/attachments/2017-10/original/d5c97d5425b4203485fb20c5a280a019656dfa8e/7982-GTA5-2017-08-07-15-41-57-88.jpg" alt="">
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+            </div>
         </div>
+
+        <div class="price">$4,000,000</div>
 
         <h3>Select from available colors to order:</h3>
         <div class="color-options">
@@ -47,5 +64,30 @@
             The perfect car to go with your flesh tunnel earrings, frosted spikes, and oversize jeans. Buy this and you'll never be judged again.
         </div>
     </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const slideElements = document.querySelectorAll('.slide');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentSlide = 0;
+
+        function updateSlide() {
+            const slideWidth = slideElements[0].clientWidth;
+            slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slideElements.length;
+            updateSlide();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slideElements.length) % slideElements.length;
+            updateSlide();
+        });
+
+        window.addEventListener('resize', updateSlide);
+    </script>
 </body>
 </html>
