@@ -10,12 +10,40 @@ body {
     background-color: #ffcc00;
     color: #333;
     top: 100px;
-    padding: 1px;
-    text-align: center;
+    padding: 10px; /* Добавляем немного отступа */
     font-size: 12px;
     font-weight: bold;
-
+    display: flex; /* Включаем Flexbox */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    text-align: left; /* Выравнивание текста внутри блока */
 }
+
+.header img {
+    width: 120px; /* Размер изображения */
+    height: auto; /* Пропорциональная высота */
+    margin-right: 15px; /* Отступ справа от изображения */
+    margin-right: 10px
+}
+
+.header .text {
+    display: flex;
+    flex-direction: column; /* Располагаем строки текста вертикально */
+    justify-content: center; /* Центрируем текст по вертикали */
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+.header .title {
+    font-size: 46px; /* Размер для заголовка */
+    font-weight: bold;
+}
+
+.header .subtitle {
+    font-size: 20px; /* Размер для подзаголовка */
+    color: #333; /* Немного более светлый цвет для подзаголовка */
+}
+
+
 
 .sidebar {
     top: 130px; /* Панель будет расположена немного ниже (отступ от верхнего края) */
@@ -31,22 +59,26 @@ body {
 }
 
 .sidebar button {
-    padding: 10px 20px; /* Исправление отступов вокруг текста кнопки */
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 15px;
+    padding: 12px 24px; /* Увеличены отступы вокруг текста для большего комфорта */
+    background-color: #45a049; /* Изменен цвет кнопки на более современный */
+    color: #ffffff; /* Сохраняем белый цвет текста */
+    border: 2px solid #45a049; /* Добавляем контрастную рамку */
+    border-radius: 8px; /* Уменьшаем радиус для более строгого вида */
     cursor: pointer;
-    margin: 0 15px; /* Увеличены отступы между кнопками */
-    font-size: 18px; /* Увеличиваем размер шрифта */
+    margin: 10px 15px; /* Сохраняем текущие отступы между кнопками */
+    font-size: 16px; /* Немного уменьшаем шрифт для визуального баланса */
+    font-weight: bold; /* Делаем текст кнопки жирным */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Добавляем мягкую тень */
+    transition: background-color 0.3s, transform 0.2s; /* Анимация для наведения */
 }
 
 .sidebar button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Темнее при наведении */
+    transform: scale(1.2); /* Легкое увеличение при наведении */
 }
 
 .image-container {
-    margin-top: 120px; /* Добавляем отступ сверху, чтобы контент не перекрывал панель */
+    margin-top: 20px; /* Добавляем отступ сверху, чтобы контент не перекрывал панель */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -71,19 +103,24 @@ body {
 }
 
 .car-item button {
-    margin-top: 10px;
-    padding: 10px 80px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    margin-top: 10px; /* Сохраняем текущий отступ сверху */
+    padding: 12px 40px; /* Увеличиваем вертикальные отступы, уменьшаем горизонтальные для баланса */
+    background-color: #9d00ff; /* Изменен цвет на более современный */
+    color: #ffffff; /* Сохраняем белый цвет текста */
+    border: 2px solid #9d00ff; /* Добавляем контрастную рамку */
+    border-radius: 8px; /* Немного увеличиваем радиус */
     cursor: pointer;
-
+    font-size: 16px; /* Устанавливаем комфортный размер шрифта */
+    font-weight: bold; /* Делаем текст жирным */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Добавляем тень для объема */
+    transition: background-color 0.3s, transform 0.2s; /* Анимация для плавного изменения */
 }
 
 .car-item button:hover {
-    background-color: #45a049;
+    background-color: #ffde21; /* Меняем цвет на более темный при наведении */
+    transform: scale(1.35); /* Легкое увеличение при наведении */
 }
+
 
 h1, h2 {
     text-align: center;
