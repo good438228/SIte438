@@ -7,8 +7,90 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Longin store</title>
 
-</head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+        }
 
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #555;
+        }
+
+        .footer-container .column {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-container h4 {
+            margin-top: 0;
+        }
+
+        .footer-container p, .footer-container ul {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .footer-container ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-container ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-container ul li a {
+            text-decoration: none;
+            color: #ddd;
+        }
+
+        .footer-container ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons a {
+            display: block;
+            margin-bottom: 10px;
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 10px;
+            background-color: #444;
+        }
+
+        .country-select label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .country-select select {
+            padding: 5px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+        }
+
+        .country-select select:focus {
+            outline: none;
+        }
+    </style>
+
+</head>
 
 <body>
 
@@ -76,7 +158,51 @@
 
     </div>
 
+    <footer>
+        <div class="footer-container">
+            <!-- About Us Section -->
+            <div class="column">
+                <h4>About us</h4>
+                <p>Longin store — это онлайн-платформа для покупки автомобилей. Мы создаем место, где процесс выбора машины становится простым, быстрым и приятным.
+                    Наш сайт предлагает широкий выбор автомобилей — от надежных повседневных моделей до стильных и мощных машин, о которых вы всегда мечтали. Мы верим, что каждый должен иметь доступ к качественным автомобилям, и стремимся сделать этот процесс максимально прозрачным и удобным..</p>
+                <p>Все автомобили на нашем сайте тщательно проверены и отобраны нашей командой, а также представлены продавцами, которым мы доверяем. Каждая сделка помогает нам развивать платформу, улучшать сервис и предлагать вам еще больше качественных автомобилей.</p>
+                <div class="country-select">
+                    <label for="country">Валюта </label>
+                    <select id="country">
+                        <option value="usd">United States (USD $)</option>
+                        <option value="eur">Europe (EUR €)</option>
+                    </select>
+                </div>
+            </div>
 
+            <!-- Social Links -->
+            <div class="column">
+                <h4>Follow us</h4>
+                <div class="social-icons">
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://youtube.com" target="_blank">YouTube</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://tiktok.com" target="_blank">TikTok</a>
+                    <a href="mailto:info@glitchproductions.com" target="_blank">Email</a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/Privacy">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us: Longin.store@gmail.com</a></li>
+                    <li><a href="#">Track Your Order</a></li>
+                    <li><a href="/Return">Refund and Return Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2025 Longin Store</p>
+        </div>
+    </footer>
 
 </body>
 </html>

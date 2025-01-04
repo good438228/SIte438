@@ -83,10 +83,14 @@ def page9():
 def products():
     return render_template('products.html')
 
+@app.route("/Privacy")
+def Privacy():
+        return render_template('Privacy.html')
 
+@app.route("/Return")
+def Return():
+        return render_template('Return.html')
 
-
-    return render_template('products.html', products=cards)
 
 
 if __name__ == "__main__":
