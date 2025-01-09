@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -95,14 +95,22 @@
 <body>
 
     <div class="sidebar">
-        <button onclick="window.location.href='';">Test button</button>
+        <div class="country-select">
+                  <label for="country"></label>
+                    <select id="country">
+                    <option value="usd">United States (USD $)</option>
+                    <option value="eur">Europe (EUR €)</option>
+                    <option value="uah">Ukraine (UAH ₴)</option>
+                    <option value="pln">Poland (PLN zł)</option> <!-- Исправлено "pnl" на "pln" -->
+                    </select>
+        </div>
         <button onclick="window.location.href='/index2';">Store</button>
         <button onclick="window.location.href='/products';">Updates</button>
         <button onclick="window.location.href='/page3';">Information</button>
     </div>
 
     <div class="header">
-        <img src="https://media.discordapp.net/attachments/756894136723963925/1298675560943321150/who-wins-this-war-v0-azbiu239liwd1.png?ex=6770c79d&is=676f761d&hm=0764591c4bd67eeea79ce2e60f7f31a84916c7872e37a41f1bda283dfe2e4ebc&=&format=webp&quality=lossless&width=450&height=450" alt="">
+        <img src="https://media.discordapp.net/attachments/756894136723963925/1298675560943321150/who-wins-this-war-v0-azbiu239liwd1.png?ex=6780999d&is=677f481d&hm=57a7dd57f8544880c533d2c50f5a87be6b6fbfac27abaa57cb16964a005b0689&=&format=webp&quality=lossless&width=450&height=450" alt="">
     <div class="text">
         <div class="title">Login store</div>
         <div class="subtitle">Онлайн магазин машин</div>
@@ -158,6 +166,18 @@
 
     </div>
 
+        <div class="header2">
+        <div class="title"><h1>Новые машины</h1></div>
+    </div>
+
+            <div class="product-card">
+            <img src="https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="Fathom FR36">
+            <h3>???</h3>
+            <p>Price: $???</p>
+        </div>
+
+
+
     <footer>
         <div class="footer-container">
             <!-- About Us Section -->
@@ -165,14 +185,8 @@
                 <h4>About us</h4>
                 <p>Longin store — это онлайн-платформа для покупки автомобилей. Мы создаем место, где процесс выбора машины становится простым, быстрым и приятным.
                     Наш сайт предлагает широкий выбор автомобилей — от надежных повседневных моделей до стильных и мощных машин, о которых вы всегда мечтали. Мы верим, что каждый должен иметь доступ к качественным автомобилям, и стремимся сделать этот процесс максимально прозрачным и удобным..</p>
-                <p>Все автомобили на нашем сайте тщательно проверены и отобраны нашей командой, а также представлены продавцами, которым мы доверяем. Каждая сделка помогает нам развивать платформу, улучшать сервис и предлагать вам еще больше качественных автомобилей.</p>
-                <div class="country-select">
-                    <label for="country">Валюта </label>
-                    <select id="country">
-                        <option value="usd">United States (USD $)</option>
-                        <option value="eur">Europe (EUR €)</option>
-                    </select>
-                </div>
+                <p>Все автомобили на нашем сайте тщательно проверены и отобраны нашей командой. Каждая покупка помогает нам развивать платформу, улучшать сервис и предлагать вам еще больше качественных автомобилей.</p>
+
             </div>
 
             <!-- Social Links -->
@@ -192,10 +206,9 @@
             <div class="column">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="/Privacy">Privacy Policy</a></li>
+                    <li><a href="/Privacy">Политика конфиденциальности</a></li>
                     <li><a href="#">Contact Us: Longin.store@gmail.com</a></li>
-                    <li><a href="#">Track Your Order</a></li>
-                    <li><a href="/Return">Refund and Return Policy</a></li>
+                    <li><a href="/Return">Политика возврата и возмещения</a></li>
                 </ul>
             </div>
         </div>
@@ -203,6 +216,62 @@
             <p>Copyright © 2025 Longin Store</p>
         </div>
     </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const currencySelect = document.getElementById('country');
+        const prices = document.querySelectorAll('.car-item .card-price, .car-item p');
+
+        // Base prices in USD
+        const basePrices = {
+            "Turismo R": 2525000,
+            "Declasse Impaler LX": 1465000,
+            "Scramjet": 3600000,
+            "Vigilante": 2700000,
+            "Coil Rocket Voil ZX": 4000000,
+            "Ubermacht": 610000
+        };
+
+        // Conversion rates from USD to other currencies (1 USD = X currency)
+        const currencyRates = {
+            "usd": 1,
+            "eur": 0.91,  // Example: 1 USD = 0.91 EUR
+            "uah": 40,    // Example: 1 USD = 40 UAH
+            "pln": 4.3    // Example: 1 USD = 4.3 PLN
+        };
+
+        // Currency symbols
+        const currencySymbols = {
+            "usd": "$",
+            "eur": "€",
+            "uah": "₴", // Symbol for UAH (Ukrainian Hryvnia)
+            "pln": "zł" // Symbol for PLN (Polish Zloty)
+        };
+
+        // Function to update the prices based on the selected currency
+        function updatePrices() {
+            const selectedCurrency = currencySelect.value;
+            const rate = currencyRates[selectedCurrency];
+            const symbol = currencySymbols[selectedCurrency];
+
+            prices.forEach(priceElement => {
+                const carName = priceElement.parentElement.querySelector('h3').textContent.trim();
+                if (basePrices[carName] !== undefined) {
+                    // Convert the price from USD to the selected currency
+                    const convertedPrice = (basePrices[carName] * rate).toLocaleString();
+                    priceElement.textContent = `Price: ${symbol}${convertedPrice}`;
+                }
+            });
+        }
+
+        // Event listener to update prices when currency is changed
+        currencySelect.addEventListener('change', updatePrices);
+
+        // Initialize prices on page load
+        updatePrices();
+    });
+</script>
+
 
 </body>
 </html>
