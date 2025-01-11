@@ -120,7 +120,7 @@ body {
 }
 
 
-.car-item button {
+.car-item a {
     margin-top: 10px; /* Сохраняем текущий отступ сверху */
     padding: 12px 40px; /* Увеличиваем вертикальные отступы, уменьшаем горизонтальные для баланса */
     background-color: #9d00ff; /* Изменен цвет на более современный */
@@ -134,7 +134,7 @@ body {
     transition: background-color 0.3s, transform 0.2s; /* Анимация для плавного изменения */
 }
 
-.car-item button:hover {
+.car-item a:hover {
     background-color: #ffde21; /* Меняем цвет на более темный при наведении */
     transform: scale(1.35); /* Легкое увеличение при наведении */
 }

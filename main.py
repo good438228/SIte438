@@ -20,16 +20,12 @@ def make_product_card(info, cards=None):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
-
-
-@app.route("/result")
-def result():
     connection = sqlite3.connect("database.sqlite")
     cursor = connection.cursor()
     cards = cursor.execute("SELECT * FROM products").fetchall()
     connection.close()
-    return render_template('products.html', products=cards)
+    print(cards)
+    return render_template('index.html', cars=cards)
 
 
 @app.route("/page1")

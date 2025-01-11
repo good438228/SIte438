@@ -118,57 +118,20 @@
     </div>
 
     <div class="image-container">
+        {% for car in cars %}
+            <div class="car-item">
+                <img src="{{url_for('static', filename='img/' + car[3])}}" alt={{car[1]}}>
+                <h3 class="card-title">{{car[1]}}}}</h3>
+                <p class="card-price">${{car[2]}}</p>
+                <a href="{{url_for('page2')}}">buy</a>
+            </div>
+        {% endfor %}
 
-        <div class="car-item">
-            <img src="https://cq.ru/img/f/e/2024/5/09/253505.jpg" alt="Turismo R">
-            <h3 class="card-title">Turismo R</h3>
-            <p class="card-price">$2,525,000</p>
-            <button onclick="window.location.href='/page2';">buy</button>
-        </div>
-
-
-        <div class="car-item">
-            <img src="https://pbs.twimg.com/media/GSMg73WbsAAMZjH.jpg:large" alt="Declasse Impaler LX">
-            <h3>Declasse Impaler LX</h3>
-            <p>Price: $1,465,000</p>
-           <button onclick="window.location.href='/page4';">buy</button>
-        </div>
-
-
-        <div class="car-item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTBc7xCI-OGWCzMmFmVbl24Nv7zIWTuAaweg&s" alt="Karin Vivanite">
-            <h3>Scramjet</h3>
-            <p>Price: $3,600,000</p>
-            <button onclick="window.location.href='/page5';">buy</button>
-        </div>
-
-        <div class="car-item">
-            <img src="https://www.gta5rides.com/vehicleimages/cropped/vigilante.jpg.jpg" alt="Vapid Dominator GT">
-            <h3>Vigilante</h3>
-            <p>Price: $2,700,000</p>
-            <button onclick="window.location.href='/page6';">buy</button>
-        </div>
-
-        <div class="car-item">
-            <img src="https://cs1.gtavicecity.ru/attachments/2017-10/original/2402ae2ea4548f090ce3157043e2cb7460145d51/7981-GTA5-2017-08-07-15-41-49-58.jpg" alt="Declasse Vigero ZX">
-            <h3>Coil Rocket Voil ZX</h3>
-            <p>Price: $4,000,000</p>
-            <button onclick="window.location.href='/page7';">buy</button>
-        </div>
-
-
-        <div class="car-item">
-            <img src="https://steamuserimages-a.akamaihd.net/ugc/1660106200672093290/78617138FD0892AD2347D23EF3F1199247E25156/" alt="Fathom FR36">
-            <h3>Ubermacht</h3>
-            <p>Price: $610,000</p>
-            <button onclick="window.location.href='/page8';">buy</button>
-        </div>
-
-    </div>
-
-        <div class="header2">
+                <div class="header2">
         <div class="title"><h1>Новые машины</h1></div>
     </div>
+
+
 
             <div class="product-card">
             <img src="https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="Fathom FR36">
