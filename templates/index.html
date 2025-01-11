@@ -104,15 +104,15 @@
                     <option value="pln">Poland (PLN zł)</option> <!-- Исправлено "pnl" на "pln" -->
                     </select>
         </div>
-        <button onclick="window.location.href='/index2';">Store</button>
+        <button onclick="window.location.href='/index2';">Main menu</button>
         <button onclick="window.location.href='/products';">Updates</button>
         <button onclick="window.location.href='/page3';">Information</button>
     </div>
 
     <div class="header">
-        <img src="Clock.logo.jpg" alt="">
+        <img src="static/img/latest.png" alt="Clock Icon">
     <div class="text">
-        <div class="title">Longin store</div>
+        <div class="title">Longinus store</div>
         <div class="subtitle">Онлайн магазин машин</div>
     </div>
     </div>
@@ -123,7 +123,7 @@
                 <img src="{{url_for('static', filename='img/' + car[3])}}" alt={{car[1]}}>
                 <h3 class="card-title">{{car[1]}}</h3>
                 <p class="card-price">${{car[2]}}</p>
-                <a href="{{url_for('page5')}}">buy</a>
+                <a href="{{url_for('page2')}}">buy</a>
             </div>
         {% endfor %}
 
@@ -146,7 +146,7 @@
             <!-- About Us Section -->
             <div class="column">
                 <h4>About us</h4>
-                <p>Longin store — это онлайн-платформа для покупки автомобилей. Мы создаем место, где процесс выбора машины становится простым, быстрым и приятным.
+                <p>Longinus store — это онлайн-платформа для покупки автомобилей. Мы создаем место, где процесс выбора машины становится простым, быстрым и приятным.
                     Наш сайт предлагает широкий выбор автомобилей — от надежных повседневных моделей до стильных и мощных машин, о которых вы всегда мечтали. Мы верим, что каждый должен иметь доступ к качественным автомобилям, и стремимся сделать этот процесс максимально прозрачным и удобным..</p>
                 <p>Все автомобили на нашем сайте тщательно проверены и отобраны нашей командой. Каждая покупка помогает нам развивать платформу, улучшать сервис и предлагать вам еще больше качественных автомобилей.</p>
 
@@ -176,7 +176,7 @@
             </div>
         </div>
         <div class="copyright">
-            <p>Copyright © 2025 Longin Store</p>
+            <p>Copyright © 2025 Longinus Store</p>
         </div>
     </footer>
 

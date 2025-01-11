@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en"
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="description" content="Longin store">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>Longin store</title>
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #333;
+color: #fff;
+}
+.footer-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 20px;
+background-color: #555;
+}
+.footer-container .column {
+flex: 1;
+margin: 10px;
+min-width: 200px;
+}
+.footer-container h4 {
+margin-top: 0;
+}
+.footer-container p, .footer-container ul {
+margin: 10px 0;
+line-height: 1.6;
+}
+.footer-container ul {
+list-style: none;
+padding: 0;
+}
+.footer-container ul li {
+margin-bottom: 10px;
+}
+.footer-container ul li a {
+text-decoration: none;
+color: #ddd;
+}
+.footer-container ul li a:hover {
+text-decoration: underline;
+}
+.social-icons a {
+display: block;
+margin-bottom: 10px;
+color: #ddd;
+text-decoration: none;
+}
+.social-icons a:hover {
+text-decoration: underline;
+}
+.copyright {
+text-align: center;
+padding: 10px;
+background-color: #444;
+}
+.country-select label {
+display: block;
+margin-bottom: 5px;
+}
+.country-select select {
+padding: 5px;
+background-color: #444;
+color: #fff;
+border: none;
+}
+.country-select select:focus {
+outline: none;
+}
+</style>
+</head>
+<body>
+<div class="sidebar">
+<div class="country-select">
+<label for="country"></label>
+<select id="country">
+<option value="usd">United States (USD $)</option>
+<option value="eur">Europe (EUR €)</option>
+<option value="uah">Ukraine (UAH ₴)</option>
+<option value="pln">Poland (PLN zł)</option> <!-- Исправлено "pnl" на "pln" -->
+</select>
+</div>
+<button onclick="window.location.href='/index2';">Main menu</button>
+<button onclick="window.location.href='/products';">Updates</button>
+<button onclick="window.location.href='/page3';">Information</button>
+</div>
+<div class="header">
+<img src="https://media.discordapp.net/attachments/756894136723963925/1298675560943321150/who-wins-this-war-v0-azbiu239liwd1.png?ex=6780999d&is=677f481d&hm=57a7dd57f8544880c533d2c50f5a87be6b6fbfac27abaa57cb16964a005b0689&=&format=webp&quality=lossless&width=450&height=450" alt="">
+<div class="text">
+<div class="title">Longinus store</div>
+<div class="subtitle">Онлайн магазин машин</div>
+</div>
+</div>
+<div class="image-container">
+<div class="car-item">
+<img src="https://cq.ru/img/f/e/2024/5/09/253505.jpg" alt="Turismo R">
+<h3 class="card-title">Turismo R</h3>
+<p class="card-price">$2,525,000</p>
+<button onclick="window.location.href='/page2';">buy</button>
+</div>
+<div class="car-item">
+<img src="https://pbs.twimg.com/media/GSMg73WbsAAMZjH.jpg:large" alt="Declasse Impaler LX">
+<h3>Declasse Impaler LX</h3>
+<p>Price: $1,465,000</p>
+<button onclick="window.location.href='/page4';">buy</button>
+</div>
+<div class="car-item">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTBc7xCI-OGWCzMmFmVbl24Nv7zIWTuAaweg&s" alt="Karin Vivanite">
+<h3>Scramjet</h3>
+<p>Price: $3,600,000</p>
+<button onclick="window.location.href='/page5';">buy</button>
+</div>
+<div class="car-item">
+<img src="https://www.gta5rides.com/vehicleimages/cropped/vigilante.jpg.jpg" alt="Vapid Dominator GT">
+<h3>Vigilante</h3>
+<p>Price: $2,700,000</p>
+<button onclick="window.location.href='/page6';">buy</button>
+</div>
+<div class="car-item">
+<img src="https://cs1.gtavicecity.ru/attachments/2017-10/original/2402ae2ea4548f090ce3157043e2cb7460145d51/7981-GTA5-2017-08-07-15-41-49-58.jpg" alt="Declasse Vigero ZX">
+<h3>Coil Rocket Voil ZX</h3>
+<p>Price: $4,000,000</p>
+<button onclick="window.location.href='/page7';">buy</button>
+</div>
+<div class="car-item">
+<img src="https://steamuserimages-a.akamaihd.net/ugc/1660106200672093290/78617138FD0892AD2347D23EF3F1199247E25156/" alt="Fathom FR36">
+<h3>Ubermacht</h3>
+<p>Price: $610,000</p>
+<button onclick="window.location.href='/page8';">buy</button>
+</div>
+</div>
+<div class="header2">
+<div class="title"><h1>Новые машины</h1></div>
+</div>
+<div class="product-card">
+<img src="https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="Fathom FR36">
+<h3>???</h3>
+<p>Price: $???</p>
+</div>
+<footer>
+<div class="footer-container">
+<!-- About Us Section -->
+<div class="column">
+<h4>About us</h4>
+<p>Longinus store — это онлайн-платформа для покупки автомобилей. Мы создаем место, где процесс выбора машины становится простым, быстрым и приятным.
+Наш сайт предлагает широкий выбор автомобилей — от надежных повседневных моделей до стильных и мощных машин, о которых вы всегда мечтали. Мы верим, что каждый должен иметь доступ к качественным автомобилям, и стремимся сделать этот процесс максимально прозрачным и удобным..</p>
+<p>Все автомобили на нашем сайте тщательно проверены и отобраны нашей командой. Каждая покупка помогает нам развивать платформу, улучшать сервис и предлагать вам еще больше качественных автомобилей.</p>
+</div>
+<!-- Social Links -->
+<div class="column">
+<h4>Follow us</h4>
+<div class="social-icons">
+<a href="https://twitter.com" target="_blank">Twitter</a>
+<a href="https://facebook.com" target="_blank">Facebook</a>
+<a href="https://youtube.com" target="_blank">YouTube</a>
+<a href="https://instagram.com" target="_blank">Instagram</a>
+<a href="https://tiktok.com" target="_blank">TikTok</a>
+<a href="mailto:info@glitchproductions.com" target="_blank">Email</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="column">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="/Privacy">Политика конфиденциальности</a></li>
+<li><a href="#">Contact Us: Longin.store@gmail.com</a></li>
+<li><a href="/Return">Политика возврата и возмещения</a></li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+<p>Copyright © 2025 Longinus Store</p>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+const currencySelect = document.getElementById('country');
+const prices = document.querySelectorAll('.car-item .card-price, .car-item p');
+// Base prices in USD
+const basePrices = {
+"Turismo R": 2525000,
+"Declasse Impaler LX": 1465000,
+"Scramjet": 3600000,
+"Vigilante": 2700000,
+"Coil Rocket Voil ZX": 4000000,
+"Ubermacht": 610000
+};
+// Conversion rates from USD to other currencies (1 USD = X currency)
+const currencyRates = {
+"usd": 1,
+"eur": 0.91, // Example: 1 USD = 0.91 EUR
+"uah": 40, // Example: 1 USD = 40 UAH
+"pln": 4.3 // Example: 1 USD = 4.3 PLN
+};
+// Currency symbols
+const currencySymbols = {
+"usd": "$",
+"eur": "€",
+"uah": "₴", // Symbol for UAH (Ukrainian Hryvnia)
+"pln": "zł" // Symbol for PLN (Polish Zloty)
+};
+// Function to update the prices based on the selected currency
+function updatePrices() {
+const selectedCurrency = currencySelect.value;
+const rate = currencyRates[selectedCurrency];
+const symbol = currencySymbols[selectedCurrency];
+prices.forEach(priceElement => {
+const carName = priceElement.parentElement.querySelector('h3').textContent.trim();
+if (basePrices[carName] !== undefined) {
+// Convert the price from USD to the selected currency
+const convertedPrice = (basePrices[carName] * rate).toLocaleString();
+priceElement.textContent = `Price: ${symbol}${convertedPrice}`;
+}
+});
+}
+// Event listener to update prices when currency is changed
+currencySelect.addEventListener('change', updatePrices);
+// Initialize prices on page load
+updatePrices();
+});
+</script>
+</body>
+</html>

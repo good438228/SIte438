@@ -139,6 +139,25 @@ body {
     transform: scale(1.35); /* Легкое увеличение при наведении */
 }
 
+.car-item button {
+    margin-top: 10px; /* Сохраняем текущий отступ сверху */
+    padding: 12px 40px; /* Увеличиваем вертикальные отступы, уменьшаем горизонтальные для баланса */
+    background-color: #9d00ff; /* Изменен цвет на более современный */
+    color: #ffffff; /* Сохраняем белый цвет текста */
+    border: 2px solid #9d00ff; /* Добавляем контрастную рамку */
+    border-radius: 8px; /* Немного увеличиваем радиус */
+    cursor: pointer;
+    font-size: 16px; /* Устанавливаем комфортный размер шрифта */
+    font-weight: bold; /* Делаем текст жирным */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Добавляем тень для объема */
+    transition: background-color 0.3s, transform 0.2s; /* Анимация для плавного изменения */
+}
+
+.car-item button:hover {
+    background-color: #ffde21; /* Меняем цвет на более темный при наведении */
+    transform: scale(1.35); /* Легкое увеличение при наведении */
+}
+
         .product-card {
       text-align: center;
     margin: 20px;
