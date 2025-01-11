@@ -110,9 +110,9 @@
     </div>
 
     <div class="header">
-        <img src="https://media.discordapp.net/attachments/756894136723963925/1298675560943321150/who-wins-this-war-v0-azbiu239liwd1.png?ex=6780999d&is=677f481d&hm=57a7dd57f8544880c533d2c50f5a87be6b6fbfac27abaa57cb16964a005b0689&=&format=webp&quality=lossless&width=450&height=450" alt="">
+        <img src="Clock.logo.jpg" alt="">
     <div class="text">
-        <div class="title">Login store</div>
+        <div class="title">Longin store</div>
         <div class="subtitle">Онлайн магазин машин</div>
     </div>
     </div>
@@ -121,9 +121,9 @@
         {% for car in cars %}
             <div class="car-item">
                 <img src="{{url_for('static', filename='img/' + car[3])}}" alt={{car[1]}}>
-                <h3 class="card-title">{{car[1]}}}}</h3>
+                <h3 class="card-title">{{car[1]}}</h3>
                 <p class="card-price">${{car[2]}}</p>
-                <a href="{{url_for('page2')}}">buy</a>
+                <a href="{{url_for('page5')}}">buy</a>
             </div>
         {% endfor %}
 

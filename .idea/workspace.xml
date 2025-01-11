@@ -5,20 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="252d8b70-a4eb-493b-bd99-3fc7d19c245f" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/Car2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/Car3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/Car4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/Car5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/Car6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/Turismo2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/Turismo3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/Car31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/Car32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/Car41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/Car42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/Car51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/Car52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/Car61.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/Car62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/Clock.logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Privacy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/yjhere.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/yjhere.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -65,6 +64,7 @@
       <recent name="E:\yjhere\venv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\SIte4381\static\img" />
       <recent name="E:\yjhere\static" />
       <recent name="E:\yjhere\templates" />
     </key>
@@ -72,7 +72,6 @@
   <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="yjhere" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -94,7 +93,6 @@
     </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="yjhere" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
