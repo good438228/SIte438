@@ -95,16 +95,31 @@
         .color-black { background-color: #212121; }
         .color-white { background-color: #ffffff; border: 2px solid #212121; }
 
-        .buy-button {
-            width: 100%;
-            padding: 10px;
-            font-size: 18px;
-            background-color: #00796b;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+
+.parent-container {
+    display: flex;
+    justify-content: center;
+}
+.buy-button {
+    width: 800px; /* Увеличенная ширина кнопки */
+    max-width: 500px; /* Ограничение максимальной ширины */
+    padding: 15px; /* Увеличенный отступ */
+    font-size: 18px;
+    background-color: #00796b; /* Цвет без изменений */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование текста */
+    align-items: center; /* Вертикальное центрирование текста */
+    text-align: center;
+    margin: 0 auto; /* Центрирование кнопки */
+}
+
+
+
+
 
         .buy-button:hover {
             background-color: #004d40;

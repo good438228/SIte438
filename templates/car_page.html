@@ -15,29 +15,29 @@
 
         <div class="sidebar">
         <button onclick="window.location.href='';">Test button</button>
-        <button onclick="window.location.href='/index2';">Store</button>
-        <button onclick="window.location.href='/products';">Updates</button>
+        <button onclick="window.location.href='{{url_for('index')}}';">Main menu</button>
+        <button onclick="window.location.href='{{url_for('products')}}';">Updates</button>
         <button onclick="window.location.href='/page3';">Information</button>
     </div>
 
 
     <div class="header">
-        <h1>Longin Store</h1>
+        <h1>Longinus Store</h1>
     </div>
 
     <div class="container">
-        <h2>Turismo R</h2>
+        <h2>{{car[1]}}</h2>
 
         <div class="slider">
             <div class="slides">
                 <div class="slide">
-                    <img src="https://cq.ru/img/f/e/2024/5/09/253505.jpg" alt="Turismo R">
+                    <img src="{{ url_for('static', filename='/img/' + car[3]) }}" alt="Turismo R">
                 </div>
                 <div class="slide">
-                    <img src="https://i.redd.it/5owvar0qwwd91.jpg" alt="">
+                    <img src="{{ url_for('static', filename='/img/' + car[4]) }}" alt="Turismo R">
                 </div>
                 <div class="slide">
-                    <img src="https://external-preview.redd.it/C6_Wd7TcCrvqsR5Cnf6fsqYADYzErlE82QBjLIgE-xU.jpg?auto=webp&s=b11d9f6b827c5fc363fd415363dbdad2d8fe5073" alt="">
+                    <img src="{{ url_for('static', filename='/img/' + car[5]) }}" alt="Turismo R">
                 </div>
             </div>
             <div class="slider-controls">
@@ -46,7 +46,7 @@
             </div>
         </div>
 
-        <div class="price">$2,525,000</div>
+        <div class="price">${{car[2]}}</div>
 
         <h3>Select from available colors to order:</h3>
         <div class="color-options">
@@ -58,7 +58,9 @@
             <div class="color-white"></div>
         </div>
 
-        <button class="buy-button" onclick="window.location.href='page9';">Confirm</button>
+        <div class="parent-container">
+        <a class="buy-button" href="{{url_for('page9')}}">Confirm</a>
+         </div>
 
         <div class="description">
             The perfect car to go with your flesh tunnel earrings, frosted spikes, and oversize jeans. Buy this and you'll never be judged again.
